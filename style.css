@@ -1,0 +1,49 @@
+:root {
+    --cream: #fdfaf5;
+    --gold: #c5a059;
+    --brown: #5d4037;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--cream);
+    color: var(--brown);
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 5%; background: rgba(253, 250, 245, 0.9);
+    position: fixed; width: 100%; z-index: 1000; backdrop-filter: blur(10px);
+}
+
+.logo { font-family: 'Dancing Script', cursive; font-size: 2rem; color: var(--gold); }
+
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 20px; }
+.nav-links a { text-decoration: none; color: var(--brown); font-weight: 500; }
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?auto=format&fit=crop&w=1500&q=80');
+    background-size: cover; background-position: center;
+    display: flex; justify-content: center; align-items: center; color: white; text-align: center;
+}
+
+.hero h1 { font-family: 'Dancing Script', cursive; font-size: 4rem; }
+
+.container { padding: 80px 10%; }
+.section-title { font-family: 'Dancing Script', cursive; font-size: 3rem; text-align: center; color: var(--gold); }
+
+.member-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+.member-card { background: white; padding: 20px; border-radius: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+
+.masonry { column-count: 2; column-gap: 20px; }
+.m-item img { width: 100%; border-radius: 10px; margin-bottom: 20px; }
+
+.reveal { opacity: 0; transform: translateY(30px); transition: 1s all ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+footer { text-align: center; padding: 40px; background: var(--brown); color: white; }
